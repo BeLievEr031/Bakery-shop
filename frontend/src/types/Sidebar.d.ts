@@ -1,0 +1,3 @@
+interface ISideProp {
+    visibility: boolean
+}

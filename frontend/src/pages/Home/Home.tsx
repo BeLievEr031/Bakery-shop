@@ -5,9 +5,11 @@ import Banner from "../Banner/Banner";
 function Home() {
   return (
     <>
-    
+
       <Navbar />
-      <Banner/>                                                           
+      <Banner />
+
+
     </>
   );
 }

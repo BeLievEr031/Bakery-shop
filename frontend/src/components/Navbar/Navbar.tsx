@@ -5,10 +5,10 @@ import Search from './Search/Search'
 
 const Navbar = () => {
   return (
-    <div className='flex justify-between items-center px-3 h-16 sticky top-0 shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] z-50'>
-      <Menu/>
-      <Search/>
-      <Profile/>
+    <div className='flex sticky w-full top-0 left-0 justify-between items-center px-3 h-16  shadow-[rgba(13,_38,_76,_0.19)_0px_9px_20px] z-90 bg-white'>
+      <Menu />
+      <Search />
+      <Profile />
     </div>
   )
 }
