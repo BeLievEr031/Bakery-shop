@@ -2,7 +2,7 @@ import React from 'react'
 
 function Sidebar({ visibility }: ISideProp) {
     return (
-        <div className='absolute left-0 top-16  uppercase'>
+        <div className='absolute left-0 top-16 uppercase'>
 
             <div className={`${visibility ? "translate-x-0" : "-translate-x-full"} transition-all delay-150 flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800`}>
                 <div className="flex flex-col w-64 bg-white h-full border-r">
