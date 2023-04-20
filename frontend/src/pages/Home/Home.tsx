@@ -8,8 +8,6 @@ function Home() {
 
       <Navbar />
       <Banner />
-
-
     </>
   );
 }
