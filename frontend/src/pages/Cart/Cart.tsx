@@ -14,8 +14,8 @@ function Cart() {
     return (
         <>
             <Navbar />
-            <div className='h-[91vh] bg-red-500'>
-                <div className="h-full bg-gray-100 pt-10 overflow-y-auto">
+            <div className='h-[96vh] bg-red-500 mt-6'>
+                <div className="h-full bg-gray-100 pt-12 overflow-y-auto">
                     <h1 className="text-center text-4xl font-bold mb-4">Cart Items</h1>
                     <div className="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
                         <div className="rounded-lg md:w-2/3">
