@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const Profile = () => {
   // const navigate = useNavigate();
   return (
-    <div className='w-[8%] flex justify-between items-center'>
+    <div className='w-[8%] max-sm:w-[25%] flex justify-between items-center'>
       <div className='flex justify-between items-center relative cursor-pointer'>
         <Link to={"/cart"}><BsFillCartFill size={24} /></Link>
         <span className='h-5 w-5 rounded-full  text-indigo-500 bg-indigo-50  flex justify-center items-center text-sm absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 mt-1'>2</span>

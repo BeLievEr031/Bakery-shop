@@ -8,7 +8,7 @@ function Card({ name, imageSrc, type, galleryArr }: IHomeCardProp) {
                 ((): React.ReactNode => {
                     switch (type) {
                         case "category":
-                            return <div className='w-[250px] h-[250px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mx-4 rounded-lg'>
+                            return <div className='w-[250px] h-[250px] shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] mx-4 rounded-lg max-sm:mt-4'>
                                 <div className="max-w-sm rounded overflow-hidden shadow-lg">
                                     <div className='w-full h-[180px]'>
                                         <img className="w-full h-full" src={imageSrc} alt="Sunset in the mountains" />
@@ -20,8 +20,8 @@ function Card({ name, imageSrc, type, galleryArr }: IHomeCardProp) {
                             </div>
                         case "gallery":
                             return <div className='flex justify-center'>
-                                <div className='w-[80vw] flex'>
-                                    <div className='h-full w-[35%] flex flex-col items-end'>
+                                <div className='w-[80vw] flex max-sm:flex-col max-sm:w-[95vw]'>
+                                    <div className='h-full w-[35%] flex flex-col items-end max-sm:flex-row max-sm:w-full'>
                                         <div className='p-2 overflow-hidden'>
                                             <img src={galleryArr && galleryArr[0].src} alt="" className='w-[300px] h-[200px] rounded-xl object-cover hover:rotate-2 hover:scale-105 transition-all' />
                                         </div>
@@ -32,7 +32,7 @@ function Card({ name, imageSrc, type, galleryArr }: IHomeCardProp) {
                                             <img src={galleryArr && galleryArr[2].src} alt="" className='w-[300px] h-[200px] rounded-xl object-cover hover:rotate-2 hover:scale-105 transition-all' />
                                         </div>
                                     </div>
-                                    <div className='h-full w-[30%] flex flex-col items-center overflow-hidden'>
+                                    <div className='h-full w-[30%] flex flex-col items-center overflow-hidden max-sm:flex-row max-sm:w-full'>
                                         <div className='p-1 overflow-hidden'>
                                             <img src={galleryArr && galleryArr[3].src} alt="" className='w-[300px] h-[310px] rounded-xl object-cover hover:scale-105 transition-all' />
                                         </div>
@@ -41,7 +41,7 @@ function Card({ name, imageSrc, type, galleryArr }: IHomeCardProp) {
                                         </div>
 
                                     </div>
-                                    <div className='h-full w-[35%] flex flex-col items-start overflow-hidden'>
+                                    <div className='h-full w-[35%] flex flex-col items-start overflow-hidden max-sm:flex-row max-sm:w-full'>
                                         <div className='p-2'>
                                             <img src={galleryArr && galleryArr[5].src} alt="" className='w-[300px] h-[200px] rounded-xl object-cover hover:-rotate-2 hover:scale-105 transition-all' />
                                         </div>

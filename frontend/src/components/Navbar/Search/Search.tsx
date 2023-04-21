@@ -2,7 +2,7 @@ import React from 'react'
 
 const Search = () => {
   return (
-    <div className='w-[60%] p-4'>
+    <div className='w-[60%] max-sm:w-[70%] p-4'>
       <form className="flex items-center">
         <label className="sr-only">Search</label>
         <div className="relative w-full">

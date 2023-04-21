@@ -7,7 +7,7 @@ function Gallery() {
     return (
         <div className=''>
             <div><Header text='Gallery' /></div>
-            <div className='pt-10'>
+            <div className='pt-10 max-sm:pt-0 max-sm:bg-red-200'>
                 <div>
                     <Card name="" imageSrc='' type='gallery' galleryArr={galleryArr} />
                 </div>

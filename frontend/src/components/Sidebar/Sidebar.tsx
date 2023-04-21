@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import Dropdown from './Dropdown/Dropdown'
 
 function Sidebar({ visibility }: ISideProp) {
+    const [dropdownToggle, setDropdownToggle] = useState<boolean>(false)
+    const navigate = useNavigate()
     return (
         <div className='absolute left-0 top-16 uppercase'>
 
@@ -10,6 +14,13 @@ function Sidebar({ visibility }: ISideProp) {
                     <div className="overflow-y-auto overflow-x-hidden flex-grow">
                         <ul className="flex flex-col py-4 space-y-1">
                             <li className="px-5">
+                                <div className='flex justify-center sm:hidden md:hidden'>
+                                    <div className="text-lg tracking-wide font-extrabold text-gray-500 cursor-pointer"
+                                        onClick={() => {
+                                            navigate("/")
+                                        }}
+                                    >Logo</div>
+                                </div>
                                 <div className="flex flex-row items-center h-8">
                                     <div className="text-sm font-light tracking-wide text-gray-500">Menu</div>
                                 </div>
@@ -30,6 +41,16 @@ function Sidebar({ visibility }: ISideProp) {
                                         </svg>
                                     </span>
                                     <span className="ml-2 text-sm tracking-wide truncate">Wishlist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                                    <span className="inline-flex justify-center items-center ml-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 172" className="w-5 h-5 fill-current dark:text-gray-400">
+                                            <path d="M21.5,21.5v129h64.5v-32.25v-64.5v-32.25zM86,53.75c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25c-17.7805,0 -32.25,14.4695 -32.25,32.25zM118.25,86c-17.7805,0 -32.25,14.4695 -32.25,32.25c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25z"></path>
+                                        </svg>
+                                    </span>
+                                    <span className="ml-2 text-sm tracking-wide truncate">our products</span>
                                 </a>
                             </li>
                             <li>
@@ -74,6 +95,21 @@ function Sidebar({ visibility }: ISideProp) {
                                     <span className="ml-2 text-sm tracking-wide truncate">Contact Us</span>
                                 </a>
                             </li>
+                            <li>
+                                <a href="#" className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                                    <span className="inline-flex justify-center items-center ml-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 172 172" className="w-5 h-5 fill-current dark:text-gray-400">
+                                            <path d="M21.5,21.5v129h64.5v-32.25v-64.5v-32.25zM86,53.75c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25c-17.7805,0 -32.25,14.4695 -32.25,32.25zM118.25,86c-17.7805,0 -32.25,14.4695 -32.25,32.25c0,17.7805 14.4695,32.25 32.25,32.25c17.7805,0 32.25,-14.4695 32.25,-32.25c0,-17.7805 -14.4695,-32.25 -32.25,-32.25z"></path>
+                                        </svg>
+                                    </span>
+                                    <span className="ml-2 text-sm tracking-wide truncate"
+                                        onClick={() => {
+                                            setDropdownToggle(!dropdownToggle)
+                                        }}
+                                    >partener with us</span>
+                                </a>
+                            </li>
+                            {dropdownToggle ? <Dropdown /> : ""}
                             <li>
                                 <a href="#" className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
                                     <span className="inline-flex justify-center items-center ml-4">
