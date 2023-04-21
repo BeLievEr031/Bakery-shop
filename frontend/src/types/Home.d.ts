@@ -10,3 +10,13 @@ interface IHomeCardProp {
     type: "category" | "gallery";
     galleryArr?: ISingleGalleryImg[]
 }
+
+interface ISingleProduct extends ISingleGalleryImg {
+    name?: string;
+    category: string;
+}
+
+interface IShopeByProductTypeProp {
+    productType: string;
+    productArr: ISingleProduct[];
+}
