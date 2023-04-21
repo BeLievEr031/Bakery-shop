@@ -3,7 +3,9 @@ import Navbar from "../../components/Navbar/Navbar";
 import Banner from "../Banner/Banner";
 import Category from "./Child/Category";
 import Gallery from "./Child/Gallery";
-import Footer from "../../components/Footer/Footer";
+import Testimonial from "./Child/Testimonial";
+import ShopByProductType from "./Child/ShopByproductType";
+import shopProductByTypeData from "../../localdata/shopproductByTypeData.json"
 
 function Home() {
   return (
@@ -16,8 +18,18 @@ function Home() {
       <div className="mt-16">
         <Gallery />
       </div>
-      <div className="mt-16">
-        <Footer />
+      <div className="flex flex-col">
+        {
+          shopProductByTypeData.map((item, index) => {
+            return <div className="mt-16 max-sm:mt-2">
+              <ShopByProductType productType={item.productType} productArr={item.productArr} />
+            </div>
+          })
+        }
+
+      </div>
+      <div className="mt-16 max-sm:mt-5">
+        <Testimonial />
       </div>
     </>
   );
