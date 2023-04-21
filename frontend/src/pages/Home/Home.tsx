@@ -26,7 +26,6 @@ function Home() {
             </div>
           })
         }
-
       </div>
       <div className="mt-16 max-sm:mt-5">
         <Testimonial />
