@@ -17,7 +17,6 @@ function ShopByProductType({ productType, productArr }: IShopeByProductTypeProp)
                             </div>
                         })
                     }
-
                 </div>
             </div>
             <div className='flex justify-center pt-14'>
