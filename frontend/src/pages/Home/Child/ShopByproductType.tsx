@@ -13,7 +13,7 @@ function ShopByProductType({ productType, productArr }: IShopeByProductTypeProp)
                 <div className='flex justify-evenly max-sm:justify-between max-sm:grid max-sm:grid-rows-2 max-sm:grid-flow-col max-sm:gap-4'>
                     {
                         productArr.map((item, index) => {
-                            return <div className='w-[200px] h-[200px] mx-4'>
+                            return <div key={index} className='w-[200px] h-[200px] max-sm:w-[140px] max-sm:h-[140px] mx-4 max-sm:mt-6'>
                                 <img src={item.src} alt={item.category} className='w-full h-full rounded-full object-cover' />
                                 <p className='text-center text-lg font-bold max-sm:text-sm max-sm:mt-2'>{item.category}</p>
                             </div>

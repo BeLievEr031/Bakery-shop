@@ -6,6 +6,7 @@ import Gallery from "./Child/Gallery";
 import Testimonial from "./Child/Testimonial";
 import ShopByProductType from "./Child/ShopByproductType";
 import shopProductByTypeData from "../../localdata/shopproductByTypeData.json"
+import Footer from "../../components/Footer/Footer";
 
 function Home() {
   return (
@@ -21,7 +22,7 @@ function Home() {
       <div className="flex flex-col">
         {
           shopProductByTypeData.map((item, index) => {
-            return <div className="mt-16 max-sm:mt-2">
+            return <div key={index} className="mt-16 max-sm:mt-2">
               <ShopByProductType productType={item.productType} productArr={item.productArr} />
             </div>
           })
@@ -29,6 +30,9 @@ function Home() {
       </div>
       <div className="mt-16 max-sm:mt-5">
         <Testimonial />
+      </div>
+      <div className="mt-16 max-sm:mt-5">
+        <Footer />
       </div>
     </>
   );
