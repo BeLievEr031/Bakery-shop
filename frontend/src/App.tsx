@@ -6,6 +6,7 @@ import FAQ from "./pages/FAQ/FAQ";
 import Products from "./pages/Products/Products";
 import SingleProduct from "./pages/Products/child/SingleProduct";
 import Wishlist from "./pages/Wishlist/Wishlist";
+import About from "./pages/About/About";
 const App = () => {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="/products" element={<Products />} />
         <Route path="/product/:id" element={<SingleProduct />} />
         <Route path="/wishlist" element={<Wishlist />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </BrowserRouter>
   );

@@ -11,7 +11,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import ImageDataSrc from "../../localdata/bannerImageArc.json"
 const Banner = () => {
   return (
-    <div className='h-[90vh] mt-16 max-sm:h-[75vh]'>
+    <div className='h-[70vh] mt-16 max-sm:h-[75vh]'>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
